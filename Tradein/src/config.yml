@@ -1,3 +1,4 @@
 AllowTimeFlyCommand: true
 AllowTradeXpCommand: true
 AllowTradeInCommand: true
+MinecraftXpMechanism: false

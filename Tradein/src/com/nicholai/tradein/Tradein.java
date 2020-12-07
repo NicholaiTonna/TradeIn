@@ -7,8 +7,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 
 public class Tradein extends JavaPlugin {
+    public static Tradein plugin;
     @Override
     public void onEnable(){
+        plugin = this;
         FileConfiguration config = this.getConfig();
         File configFile = new File(this.getDataFolder(), "config.yml");
         if (configFile.length() == 0){
@@ -17,6 +19,7 @@ public class Tradein extends JavaPlugin {
             config.addDefault("AllowTimeFlyCommand", true);
             config.addDefault("AllowTradeXpCommand", true);
             config.addDefault("AllowTradeInCommand", true);
+            config.addDefault("MinecraftXpMechanism", false);
             config.options().copyDefaults(true);
             saveConfig();
         }
